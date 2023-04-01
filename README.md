@@ -97,7 +97,7 @@ This returns a list of all users along with activity periods in the system.
 This URL returns a specific user and corresponding activity period in the system.
 
 
-# Deployement
+# Deployment
 
 This application has been deployed to a production environment using a cloud hosting platform PythonAnywhere.       
 
