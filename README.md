@@ -19,6 +19,35 @@ This is a Django-based API that provides endpoints for accessing user and activi
 ## Authentication
 This API does not require authentication to access.
 
+## Folder Structure
+```
+project/
+│
+├── users/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+|   ├── management
+|   |   └── commands
+|   |          └── populate_db.py
+│   ├── migrations/
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│
+├── user_activity/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── manage.py
+└── README.md
+```
 
 ## Models
 
@@ -48,20 +77,15 @@ The application has two serializers:
 
 ### UserSerializer
 
-```
-    This serializer is used to serialize a `User` instance. 
+    This serializer is used to serialize a `User` instance.   
     It serializes the `id`, `real_name`, and `tz` fields.
-```
 
 ### ActivityPeriodSerializer
 
-```
-    This serializer is used to serialize an `ActivityPeriod` instance. 
-    It serializes the `id`, `start_time`, `end_time`, and `user` fields. 
-    The `user` field is serialized using the `UserSerializer`.
-```
-
-
+    This serializer is used to serialize an `ActivityPeriod` instance.   
+    It serializes the `id`, `start_time`, `end_time`, and `user` fields.     
+    The `user` field is serialized using the `UserSerializer`.                 
+    
 
 ## URLs
 The application has two URLs:
@@ -75,10 +99,10 @@ This URL returns a specific user and corresponding activity period in the system
 
 # Deployement
 
-```
-This application has been deployed to a production environment using a cloud hosting platform PythonAnywhere. 
+This application has been deployed to a production environment using a cloud hosting platform PythonAnywhere.       
 
 Below are the links to access the users:
 ```
-    -   `https://jpedara.pythonanywhere.com/users/`
-    -   `https://jpedara.pythonanywhere.com/users/W012ABC1`
+    -   https://jpedara.pythonanywhere.com/users/
+    -   https://jpedara.pythonanywhere.com/users/W012ABC1
+```
