@@ -1,31 +1,33 @@
 # User Activity API
 This is a Django-based API that provides endpoints for accessing user and activity period data.
 
-# Installation:
-1.Clone this repository to your local machine.
-2.Create a virtual environment and activate it.
-3.Install the required packages by running 
-    `pip install -r requirements.txt`.
-4.Create a SQLite database by running below commands
-    `python manage.py makemigrations users`
-    `python manage.py migrate`  
-5.Populate the database with dummy data by running 
-    `python manage.py populate_db 10 3` 
-    it will create 3 activites for 10 users
-6. Start the development server using 
-    `python manage.py runserver`
+## Installation:
 
-# Authentication
+1.  Clone this repository to your local machine.
+2.  Create a virtual environment and activate it.
+3.  Install the required packages by running 
+    -   `pip install -r requirements.txt`.
+4.  Create a SQLite database by running below commands
+    -   `python manage.py makemigrations users`
+    -   `python manage.py migrate`  
+5.  Populate the database with dummy data by running 
+    -   `python manage.py populate_db 10 3` 
+    -    it will create 3 activites for 10 users
+6.  Start the development server using 
+    -   `python manage.py runserver`
+
+## Authentication
 This API does not require authentication to access.
 
-# Models
 
-# User
+## Models
 
-The User model represents a user of the application. It has the following fields:
+### User
 
-`id`: A unique identifier for the user (auto-generated).
-`real_name`: The user's real name.
+-   The User model represents a user of the application. It has the following fields:
+
+-   `id`: A unique identifier for the user (auto-generated).
+-   `real_name`: The user's real name.
 `tz`: The user's timezone.
 
 # ActivityPeriod
