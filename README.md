@@ -24,48 +24,61 @@ This API does not require authentication to access.
 
 ### User
 
--   The User model represents a user of the application. It has the following fields:
+The User model represents a user of the application. It has the following fields:
 
 -   `id`: A unique identifier for the user (auto-generated).
 -   `real_name`: The user's real name.
-`tz`: The user's timezone.
+-   `tz`: The user's timezone.
 
-# ActivityPeriod
+### ActivityPeriod
 
 The ActivityPeriod model represents a period of activity for a user. It has the following fields:
 
-`id`: A unique identifier for the activity period (auto-generated).
-`user`: A foreign key to the user associated with the activity period.
-`start_time`: The start time of the activity period.
-`end_time`: The end time of the activity period.
+-   `id`: A unique identifier for the activity period (auto-generated).
+-   `user`: A foreign key to the user associated with the activity period.
+-   `start_time`: The start time of the activity period.
+-   `end_time`: The end time of the activity period.
 
-# Serializers
+
+
+
+## Serializers
 
 The application has two serializers:
 
-# UserSerializer
+### UserSerializer
 
-This serializer is used to serialize a `User` instance. It serializes the `id`, `real_name`, and `tz` fields.
+```
+    This serializer is used to serialize a `User` instance. 
+    It serializes the `id`, `real_name`, and `tz` fields.
+```
 
-# ActivityPeriodSerializer
+### ActivityPeriodSerializer
 
-This serializer is used to serialize an `ActivityPeriod` instance. It serializes the `id`, `start_time`, `end_time`, and `user` fields. The `user` field is serialized using the `UserSerializer`.
+```
+    This serializer is used to serialize an `ActivityPeriod` instance. 
+    It serializes the `id`, `start_time`, `end_time`, and `user` fields. 
+    The `user` field is serialized using the `UserSerializer`.
+```
 
 
-# URLs
+
+## URLs
 The application has two URLs:
 
-# /users
+### /users
 This returns a list of all users along with activity periods in the system.
 
-# /users/:id
+### /users/:id
 This URL returns a specific user and corresponding activity period in the system.
 
 
 # Deployement
 
+```
 This application has been deployed to a production environment using a cloud hosting platform PythonAnywhere. 
 
-Below Are the links to access the users:
-`https://jpedara.pythonanywhere.com/users/`
-`https://jpedara.pythonanywhere.com/users/W012ABC1`
+Below are the links to access the users:
+```
+    -   `https://jpedara.pythonanywhere.com/users/`
+    -   `https://jpedara.pythonanywhere.com/users/W012ABC1`
